@@ -30,7 +30,7 @@ async function handleSubmit(event) {
         if (response.ok) {
             const responseData = await response.json();
             console.log('Сделка успешно создана в Pipedrive:', responseData);
-            displayIframe();
+            // displayIframe();
         } else {
             throw new Error('Ошибка при создании сделки в Pipedrive');
         }
@@ -40,12 +40,12 @@ async function handleSubmit(event) {
     form.reset(); // Очишчаем поля формы после отправки запроса
 }
 
-function displayIframe() {
-    const iframeContainer = document.querySelector('.iframe-container');
-    const iframe = document.createElement('iframe');
-    iframe.src = 'https://app.pipedrive.com';
-    iframe.width = '100%';
-    iframe.height = '600px';
-    iframe.frameborder = '0';
-    iframeContainer.appendChild(iframe);
-}
+// function displayIframe() {
+//     const iframeContainer = document.querySelector('.iframe-container');
+//     const iframe = document.createElement('iframe');
+//     iframe.src = 'https://app.pipedrive.com';
+//     iframe.width = '100%';
+//     iframe.height = '600px';
+//     iframe.frameborder = '0';
+//     iframeContainer.appendChild(iframe);
+// }
